@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/thongvm316/eCommerce-MERNStack-FE.git'
-                sh 'npm install'
+                sh 'npmaa install'
             }
         }
     
