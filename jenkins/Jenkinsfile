@@ -7,14 +7,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/thongvm316/eCommerce-MERNStack-FE.git'
+                git branch: 'main', url: 'https://github.com/thongvm316/eCommerce-MERNStack-FE.git'
                 sh 'npm install'
             }
         }
     
         stage('Deploy') {
             steps {
-                sh './jenkins/scripts/deploy-surge.sh'
+                sh 'npm run build'
             }
         }
     }
