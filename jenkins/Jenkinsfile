@@ -14,7 +14,7 @@ pipeline {
     
         stage('Deliver') {
             steps {
-                sh 'npm run deploy'
+                sh './jenkins/scripts/deploy-surge.sh'
             }
         }
     }
